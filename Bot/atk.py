@@ -22,8 +22,8 @@ def ataque():
     while ativo:
         pyautogui.moveTo(X_TARGET, Y_TARGET)
         pyautogui.click()
-        pyautogui.press(hotkey_list)
-        time.sleep(1)
+        for key in hotkey_list:
+            pyautogui.press(hotkey_list)
 
 def on_combination():
     global ativo
