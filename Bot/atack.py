@@ -2,6 +2,7 @@ import pyautogui
 import pyscreeze
 import time
 from helper import monstro_no_battle
+from coordenadas import BATTLE
 locate = (1629, 538, 291, 91)
 
 hotkey_list = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12']
@@ -18,7 +19,7 @@ def atack(x,y):
 
 def init_bot():
     if monstro_no_battle()==True:
-        atack(1741,421)  
+        atack(BATTLE)  
     else:
         locate=monstro_no_battle()
     time.sleep(0.5) 

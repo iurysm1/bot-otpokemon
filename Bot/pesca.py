@@ -2,6 +2,7 @@ import pyautogui
 import pyscreeze
 import time
 from helper import monstro_no_battle
+from coordenadas import PESCA
 
 
 locate = (1629, 538, 291, 91)
@@ -31,5 +32,5 @@ def init_bot_pesca():
         time.sleep(2.2)
         pyautogui.hotkey('shift', 'f1')
 
-        pyautogui.click(px,py)
+        pyautogui.click(PESCA)
     time.sleep(0.5) 

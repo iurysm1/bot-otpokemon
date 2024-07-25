@@ -2,7 +2,7 @@ from pynput import keyboard
 import pyautogui
 import threading
 import time
-from atack import init_bot
+from main import init_bot, init_bot_pesca
 
 hotkey_list = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12']
 ativo = False
