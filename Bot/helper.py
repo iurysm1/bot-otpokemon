@@ -1,11 +1,5 @@
 import pyautogui
-import pyscreeze
-import time
-locate = (1629, 538, 291, 91)
 
-pyautogui.moveTo(1736,482)
-print('teste')
-pyautogui.displayMousePosition()
 
 def monstro_no_battle():
      try:

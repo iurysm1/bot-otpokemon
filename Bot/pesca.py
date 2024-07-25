@@ -2,7 +2,7 @@ import pyautogui
 import pyscreeze
 import time
 from helper import monstro_no_battle
-from coordenadas import PESCA
+from coordenadas import PESCA, BATTLE
 
 
 locate = (1629, 538, 291, 91)
@@ -25,7 +25,7 @@ def atack_pesca(x,y):
 
 def init_bot_pesca():
     if monstro_no_battle()==True:
-        atack_pesca(1741,421)  
+        atack_pesca(BATTLE)  
     else:
         locate=monstro_no_battle()
         pyautogui.hotkey('shift', 'f1')

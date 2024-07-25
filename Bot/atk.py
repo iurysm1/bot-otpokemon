@@ -9,19 +9,13 @@ ativo = False
 current_keys = set()
 combination = {keyboard.KeyCode(char='z'), keyboard.KeyCode(char='x'), keyboard.KeyCode(char='c')}
 
-X_TARGET=1729
-Y_TARGET=490
-RGB_ATAQUE=(27,  28,  25)
-locate = (1725, 360, 194, 159)
-target= pyautogui.pixelMatchesColor(X_TARGET, Y_TARGET, RGB_ATAQUE)
-
 
 def check_is_attacking():
     return pyautogui.locateOnScreen('imgs/atacking.png')
 
 def ataque():
     while ativo:
-        init_bot()
+        init_bot_pesca()
 
 def on_combination():
     global ativo
