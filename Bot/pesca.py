@@ -1,30 +1,19 @@
 import pyautogui
 import pyscreeze
 import time
+from helper import monstro_no_battle
+
+
 locate = (1629, 538, 291, 91)
-px,py=1102,521
+px,py=1333,363
+
 
 #pyautogui.displayMousePosition()
 hotkey_list = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12']
 
 
-def monstro_no_battle():
-     try:
-        locate=pyautogui.locateOnScreen("imgs/battle_box.png", confidence=0.9)
-        print('Sem monstros no battle')
-        left = int(locate.left)
-        top = int(locate.top)
-        width = int(locate.width)
-        height = int(locate.height)
-        
-        locate_int = (left, top, width, height)
 
-        return locate_int
-     except pyautogui.ImageNotFoundException:
-        print('Monstros no battle')
-        return True
-
-def atack(x,y):
+def atack_pesca(x,y):
     pyautogui.moveTo(x,y)
     time.sleep(.5)
     pyautogui.click(x,y)
@@ -32,14 +21,10 @@ def atack(x,y):
         for key in hotkey_list:
                 pyautogui.press(key)
 
-cond = True
-x,y=(1629,538)
 
-
-while cond:
-    
+def init_bot_pesca():
     if monstro_no_battle()==True:
-        atack(1645,627)  
+        atack_pesca(1741,421)  
     else:
         locate=monstro_no_battle()
         pyautogui.hotkey('shift', 'f1')
@@ -48,9 +33,3 @@ while cond:
 
         pyautogui.click(px,py)
     time.sleep(0.5) 
-
-
-
-
-
-

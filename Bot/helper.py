@@ -3,9 +3,9 @@ import pyscreeze
 import time
 locate = (1629, 538, 291, 91)
 
-##pyautogui.displayMousePosition()
-hotkey_list = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12']
-
+pyautogui.moveTo(1736,482)
+print('teste')
+pyautogui.displayMousePosition()
 
 def monstro_no_battle():
      try:
@@ -22,27 +22,3 @@ def monstro_no_battle():
      except pyautogui.ImageNotFoundException:
         print('Monstros no battle')
         return True
-
-def atack(x,y):
-    pyautogui.click(x,y)
-    for i in range(3):
-        for key in hotkey_list:
-                pyautogui.press(key)
-
-cond = True
-x,y=(1629,538)
-
-
-while cond:
-        
-    if monstro_no_battle()==True:
-        atack(1645,627)  
-    else:
-        locate=monstro_no_battle()
-    time.sleep(0.5) 
-
-
-
-
-
-

@@ -2,6 +2,7 @@ from pynput import keyboard
 import pyautogui
 import threading
 import time
+from atack import init_bot
 
 hotkey_list = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12']
 ativo = False
@@ -20,10 +21,7 @@ def check_is_attacking():
 
 def ataque():
     while ativo:
-        pyautogui.moveTo(X_TARGET, Y_TARGET)
-        pyautogui.click()
-        for key in hotkey_list:
-            pyautogui.press(hotkey_list)
+        init_bot()
 
 def on_combination():
     global ativo
